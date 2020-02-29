@@ -1,0 +1,7 @@
+.btn {
+  color: #ffffff;
+  background: tomato;
+  &:hover {
+    background: cyan;
+  }
+}
