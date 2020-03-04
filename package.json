@@ -9,12 +9,14 @@
     "url": "https://github.com/kimulaco/static-web-template.git"
   },
   "scripts": {
+    "start": "serve public -p 3000",
     "build": "npm-run-all -s build:*",
     "build:script": "NODE_ENV=production webpack",
     "build:style": "NODE_ENV=production postcss src/css/main.css -d public/css --ext min.css",
     "dev": "npm-run-all -p dev:*",
     "dev:script": "NODE_ENV=development webpack -w",
     "dev:style": "NODE_ENV=development postcss src/css/main.css -d public/css -w",
+    "dev:serve": "serve public -p 3000",
     "lint:style": "stylelint src/css/**/*.css"
   },
   "dependencies": {},
@@ -25,6 +27,7 @@
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
+    "serve": "^11.3.0",
     "stylelint": "^13.2.0",
     "stylelint-config-recommended": "^3.0.0",
     "ts-loader": "^6.2.1",
